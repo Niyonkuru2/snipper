@@ -1,12 +1,8 @@
 export const marketSignalEmailTemplate = (
   symbol,
   signal,
-  confidence,
   timeframe,
-  lastClose,
-  stopLoss,
-  takeProfit,
-  timestamp
+  trend
 ) => `
 <!DOCTYPE html>
 <html lang="en">
@@ -95,14 +91,16 @@ export const marketSignalEmailTemplate = (
         <p><strong>Symbol:</strong> ${symbol}</p>
         <p><strong>Timeframe:</strong> ${timeframe}</p>
         <p><strong>Signal:</strong> <span class="signal-tag">${signal}</span></p>
-        <p><strong>Confidence:</strong> ${(confidence * 100).toFixed(0)}%</p>
-        <p><strong>Timestamp:</strong> ${timestamp}</p>
+        <p><strong>Timestamp:</strong> ${trend}</p>
       </div>
 
       <table class="table">
-        <tr><th>Last Close Price:</th><td>${lastClose}</td></tr>
-        <tr><th>Stop Loss:</th><td>${stopLoss}</td></tr>
-        <tr><th>Take Profit:</th><td>${takeProfit}</td></tr>
+        <tr>
+        <th>
+        Last Close Price:
+        </th>
+        <td>${lastClose}</td>
+        </tr>
       </table>
 
       <p>Please analyze this signal with your strategy before executing any trade.</p>
