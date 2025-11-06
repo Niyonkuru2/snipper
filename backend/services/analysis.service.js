@@ -18,8 +18,12 @@ export const performAnalysis = async (symbol, timeframe) => {
       const emailHTML = marketSignalEmailTemplate(
         result.symbol,
         result.signal,
+        result.confidence,
         result.timeframe,
-        result.last_close
+        result.last_close,
+        result.stop_loss,
+        result.take_profit,
+        result.timestamp
       );
 
       await sendAlertEmail(`${result.symbol} Signal Alert`, emailHTML);
@@ -53,10 +57,9 @@ export const autoAnalyzeMarket = async () => {
     { symbol: "EUR/USD", timeframe: "5min" },
     { symbol: "GBP/USD", timeframe: "5min" },
     { symbol: "USD/JPY", timeframe: "5min" },
-    { symbol: "USD/CAD", timeframe: "5min" },
     { symbol: "USD/CHF", timeframe: "5min" },
     { symbol: "NZD/USD", timeframe: "5min" },
-    //{ symbol: "GBP/JPY", timeframe: "5min" },
+    //{ symbol: "USD/CAD", timeframe: "5min" },
     //{ symbol: "EUR/GBP", timeframe: "5min" },
 
 
