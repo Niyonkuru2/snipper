@@ -1,8 +1,9 @@
 export const marketSignalEmailTemplate = (
   symbol,
   signal,
+  direction,
   timeframe,
-  trend
+  lastClose,
 ) => `
 <!DOCTYPE html>
 <html lang="en">
@@ -85,26 +86,23 @@ export const marketSignalEmailTemplate = (
     <div class="header">${signal} SIGNAL ALERT</div>
     <div class="content">
       <p>Dear Trader,</p>
-      <p>A new <strong>${signal}</strong> signal has been detected by our automated system for:</p>
+      <p>
+        A new <strong>${signal}</strong> signal has been detected by your automated EMA-50 system.
+        Here are the details:
+      </p>
       
       <div class="highlight">
         <p><strong>Symbol:</strong> ${symbol}</p>
         <p><strong>Timeframe:</strong> ${timeframe}</p>
+        <p><strong>Trend Direction:</strong> ${direction}</p>
         <p><strong>Signal:</strong> <span class="signal-tag">${signal}</span></p>
-        <p><strong>Timestamp:</strong> ${trend}</p>
+        <p><strong>Last Close Price:</strong> ${lastClose}</p>
       </div>
-
-      <table class="table">
-        <tr>
-        <th>
-        Last Close Price:
-        </th>
-        <td>${lastClose}</td>
-        </tr>
-      </table>
-
-      <p>Please analyze this signal with your strategy before executing any trade.</p>
+      <p>
+        Always confirm the signal with your trading strategy and risk management rules before entering a trade.
+      </p>
     </div>
+
     <div class="footer">
       &copy; ${new Date().getFullYear()} Market Signal Bot. All rights reserved.<br/>
       Powered by FastAPI × Node.js × Twelve Data.
