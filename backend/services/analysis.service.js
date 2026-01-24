@@ -58,7 +58,6 @@ export const autoAnalyzeMarket = async () => {
     //{ symbol: "USD/CHF", timeframe: "5min" },
     { symbol: "AUD/USD", timeframe: "5min" },
     { symbol: "GBP/JPY", timeframe: "5min" },
-    { symbol: "EUR/GBP", timeframe: "5min" },
   ];
 
   for (const pair of pairs) {
