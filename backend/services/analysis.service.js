@@ -77,6 +77,7 @@ export const autoAnalyzeMarket = async () => {
     { symbol: "USD/CAD", timeframe: "30min" },
     { symbol: "USD/CHF", timeframe: "30min" },
     { symbol: "NZD/USD", timeframe: "30min" },
+    { symbol: "AUD/USD", timeframe: "30min" },
   ];
   for (const pair of pairs) {
     console.log(`Analyzing ${pair.symbol} (${pair.timeframe})...`);
