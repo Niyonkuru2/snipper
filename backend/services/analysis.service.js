@@ -72,7 +72,7 @@ export const autoAnalyzeMarket = async () => {
     { symbol: "EUR/USD", timeframe: "30min" },
     { symbol: "EUR/GBP", timeframe: "30min" },
     { symbol: "GBP/USD", timeframe: "30min" },
-    { symbol: "GBP/JPY", timeframe: "30min" },
+    //{ symbol: "GBP/JPY", timeframe: "30min" },
     { symbol: "USD/JPY", timeframe: "30min" },
     { symbol: "USD/CAD", timeframe: "30min" },
     { symbol: "USD/CHF", timeframe: "30min" },
