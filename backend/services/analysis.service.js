@@ -173,18 +173,18 @@ const runPythonAnalysis = async (marketData, symbol, timeframe) => {
 // ------------------------------------------------------------------
 export const autoAnalyzeMarket = async () => {
   const pairs = [
-    { symbol: "EUR/USD", timeframe: "5min" },
-    { symbol: "GBP/USD", timeframe: "5min" },
-    { symbol: "USD/JPY", timeframe: "5min" },
-    { symbol: "USD/CAD", timeframe: "5min" },
-    { symbol: "USD/CHF", timeframe: "5min" },
-    { symbol: "NZD/USD", timeframe: "5min" },
-    { symbol: "AUD/USD", timeframe: "5min" },
-    { symbol: "EUR/GBP", timeframe: "5min" },
-    { symbol: "GBP/JPY", timeframe: "5min" },
-    { symbol: "XAUUSD", timeframe: "5min" },
-    { symbol: "AUD/CAD", timeframe: "5min" },
-    { symbol: "AUD/CHF", timeframe: "5min" },
+    { symbol: "EUR/USD", timeframe: "4h" },
+    { symbol: "GBP/USD", timeframe: "4h" },
+    { symbol: "USD/JPY", timeframe: "4h" },
+    { symbol: "USD/CAD", timeframe: "4h" },
+    { symbol: "USD/CHF", timeframe: "4h" },
+    { symbol: "NZD/USD", timeframe: "4h" },
+    { symbol: "AUD/USD", timeframe: "4h" },
+    { symbol: "EUR/GBP", timeframe: "4h" },
+    { symbol: "GBP/JPY", timeframe: "4h" },
+    { symbol: "XAUUSD", timeframe: "4h" },
+    { symbol: "AUD/CAD", timeframe: "4h" },
+    { symbol: "AUD/CHF", timeframe: "4h" },
   ];
 
   console.log(`🚀 Starting auto-analysis for ${pairs.length} pairs...`);
