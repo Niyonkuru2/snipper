@@ -12,6 +12,7 @@ app.listen(PORT, () => {
 
 // Run automatic analysis every hour
 //cron.schedule("*/5 * * * *", async () => {
-  //console.log("Running scheduled market analysis...");
-  //await autoAnalyzeMarket();
-//});
+ cron.schedule("0 */4 * * *", async () => {
+  console.log("Running scheduled market analysis...");
+  await autoAnalyzeMarket();
+});
