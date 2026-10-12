@@ -442,18 +442,18 @@ export const performAnalysis = async (
 
 export const autoAnalyzeMarket = async () => {
   const pairs = [
-    { symbol: "EUR/USD", timeframe: "1h" },
-    { symbol: "GBP/USD", timeframe: "1h" },
-    { symbol: "USD/JPY", timeframe: "1h" },
-    { symbol: "USD/CAD", timeframe: "1h" },
-    { symbol: "USD/CHF", timeframe: "1h" },
-    { symbol: "NZD/USD", timeframe: "1h" },
-    { symbol: "XAU/USD", timeframe: "1h" },
-    { symbol: "AUD/USD", timeframe: "1h" },
-    { symbol: "EUR/GBP", timeframe: "1h" },
-    { symbol: "GBP/JPY", timeframe: "1h" },
-    { symbol: "AUD/CAD", timeframe: "1h" },
-    { symbol: "AUD/CHF", timeframe: "1h" },
+    { symbol: "EUR/USD", timeframe: "4h" },
+    { symbol: "GBP/USD", timeframe: "4h" },
+    { symbol: "USD/JPY", timeframe: "4h" },
+    { symbol: "USD/CAD", timeframe: "4h" },
+    { symbol: "USD/CHF", timeframe: "4h" },
+    { symbol: "NZD/USD", timeframe: "4h" },
+    { symbol: "XAU/USD", timeframe: "4h" },
+    { symbol: "AUD/USD", timeframe: "4h" },
+    { symbol: "EUR/GBP", timeframe: "4h" },
+    { symbol: "GBP/JPY", timeframe: "4h" },
+    { symbol: "AUD/CAD", timeframe: "4h" },
+    { symbol: "AUD/CHF", timeframe: "4h" },
   ];
 
   console.log(
